@@ -1,0 +1,139 @@
+ng commands reference
+
+ng version
+     
+Angular CLI: 17.3.4
+Node: 20.10.0
+Package Manager: npm 10.2.3
+
+From a new angular-app created with cli 
+ng --help
+
+  Commands:
+  ng add <collection>            Adds support for an external library to your
+                                 project.
+  ng analytics                   Configures the gathering of Angular CLI usage
+                                 metrics.
+  ng build [project]             Compiles an Angular application or library into
+                                 an output directory named dist/ at the given
+                                 output path.                       [aliases: b]
+  ng cache                       Configure persistent disk cache and retrieve
+                                 cache statistics.
+  ng completion                  Set up Angular CLI autocompletion for your
+                                 terminal.
+  ng config [json-path] [value]  Retrieves or sets Angular configuration values
+                                 in the angular.json file for the workspace.
+  ng deploy [project]            Invokes the deploy builder for a specified
+                                 project or for the default project in the
+                                 workspace.
+  ng doc <keyword>               Opens the official Angular documentation
+                                 (angular.io) in a browser, and searches for a
+                                 given keyword.                     [aliases: d]
+  ng e2e [project]               Builds and serves an Angular application, then
+                                 runs end-to-end tests.             [aliases: e]
+  ng extract-i18n [project]      Extracts i18n messages from source code.
+  ng generate                    Generates and/or modifies files based on a
+                                 schematic.                         [aliases: g]
+  ng lint [project]              Runs linting tools on Angular application code
+                                 in a given project folder.
+  ng new [name]                  Creates a new Angular workspace.   [aliases: n]
+  ng run <target>                Runs an Architect target with an optional
+                                 custom builder configuration defined in your
+                                 project.
+  ng serve [project]             Builds and serves your application, rebuilding
+                                 on file changes.                   [aliases: s]
+  ng test [project]              Runs unit tests in a project.      [aliases: t]
+  ng update [packages..]         Updates your workspace and its dependencies.
+                                 See https://update.angular.io/.
+  ng version                     Outputs Angular CLI version.       [aliases: v]
+
+ 
+ng new --help
+
+ng new my-app
+
+ng serve --help
+
+ng serve --port=1100  //default is 4200
+
+  With configured port value is package.json
+  
+    "scripts": 
+    {
+    "ng": "ng",
+    "start": "ng serve --port=1200",
+
+>npm start  
+  Internall runs ng serve --port=1200
+  
+    Watch mode enabled. Watching for file changes...
+  ➜  Local:   http://localhost:1200/
+  ➜  press h + enter to show help
+
+ To create a new angular app project with NgModule use the option with 
+ ng new command as --no-standalone
+
+ ng new --no-standalone module-app
+ 
+
+cd module-app
+ng generate module info
+
+ng generate component Info
+
+ng generate --help
+
+  Generates and/or modifies files based on a schematic.
+
+Commands:
+  ng generate <schematic>              Run the provided schematic.     [default]
+  ng generate app-shell                Generates an application shell for
+                                       running a server-side version of an app.
+  ng generate application [name]       Generates a new basic application
+                                       definition in the "projects" subfolder of
+                                       the workspace.             [aliases: app]
+  ng generate class [name]             Creates a new, generic class definition
+                                       in the given project.       [aliases: cl]
+  ng generate component [name]         Creates a new, generic component
+                                       definition in the given project.
+                                                                    [aliases: c]
+  ng generate config [type]            Generates a configuration file in the
+                                       given project.
+  ng generate directive [name]         Creates a new, generic directive
+                                       definition in the given project.
+                                                                    [aliases: d]
+  ng generate enum [name]              Generates a new, generic enum definition
+                                       in the given project.        [aliases: e]
+  ng generate environments             Generates and configures environment
+                                       files for a project.
+  ng generate guard [name]             Generates a new, generic route guard
+                                       definition in the given project.
+                                                                    [aliases: g]
+  ng generate interceptor [name]       Creates a new, generic interceptor
+                                       definition in the given project.
+  ng generate interface [name] [type]  Creates a new, generic interface
+                                       definition in the given project.
+                                                                    [aliases: i]
+  ng generate library [name]           Creates a new, generic library project in
+                                       the current workspace.     [aliases: lib]
+  ng generate module [name]            Creates a new, generic NgModule
+                                       definition in the given project.
+                                                                    [aliases: m]
+  ng generate pipe [name]              Creates a new, generic pipe definition in
+                                       the given project.           [aliases: p]
+  ng generate resolver [name]          Generates a new, generic resolver
+                                       definition in the given project.
+                                                                    [aliases: r]
+  ng generate service [name]           Creates a new, generic service definition
+                                       in the given project.        [aliases: s]
+  ng generate service-worker           Pass this schematic to the "run" command
+                                       to create a service worker
+  ng generate web-worker [name]        Creates a new, generic web worker
+                                       definition in the given project.
+
+Arguments:
+  schematic  The [collection:schematic] to run.                         [string]
+
+
+ng build --help
+
